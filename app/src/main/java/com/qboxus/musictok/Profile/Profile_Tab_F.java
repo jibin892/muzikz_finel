@@ -1,7 +1,9 @@
 package com.qboxus.musictok.Profile;
 
 
+import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
@@ -41,6 +43,7 @@ import com.google.android.material.tabs.TabLayout;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatRatingBar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.app.ActivityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -105,6 +108,7 @@ import static com.arthenica.mobileffmpeg.Config.getPackageName;
 public class Profile_Tab_F extends RootFragment implements View.OnClickListener  {
     View view;
     Context context;
+    final int RequestPermissionCode=1;
     Snackbar snackbar;
     DrawerLayout drawer;
     LinearLayout editprofile,userverification,privecypolicy,settings,logout,shareapp,reportbug,rateus;
@@ -341,17 +345,17 @@ addreview();
             public void onClick(View v) {
 
 
-                Bitmap imgBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.s);
-                String imgBitmapPath = MediaStore.Images.Media.insertImage(getActivity().getContentResolver(),imgBitmap,"MUZIKA",null);
-                Uri imgBitmapUri = Uri.parse(imgBitmapPath);
-                Intent shareIntent = new Intent(Intent.ACTION_SEND);
-                shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                shareIntent.putExtra(Intent.EXTRA_STREAM,imgBitmapUri);
-                shareIntent.setType("*/*");
-                shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                shareIntent.putExtra(Intent.EXTRA_TEXT, "Download Muzika Official App From Play Store:https://play.google.com/store/apps/details?id="+getActivity().getPackageName());
-                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Muzika");
-                startActivity(Intent.createChooser(shareIntent, "Share this"));
+                    Bitmap imgBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.s);
+                    String imgBitmapPath = MediaStore.Images.Media.insertImage(getActivity().getContentResolver(), imgBitmap, "MUZIKA", null);
+                    Uri imgBitmapUri = Uri.parse(imgBitmapPath);
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    shareIntent.putExtra(Intent.EXTRA_STREAM, imgBitmapUri);
+                    shareIntent.setType("*/*");
+                    shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, "Download Muzika Official App From Play Store:https://play.google.com/store/apps/details?id=" + getActivity().getPackageName());
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Muzika");
+                    startActivity(Intent.createChooser(shareIntent, "Share this"));
 
             }
         });
@@ -1054,6 +1058,6 @@ ImageView repotubugimage=dialog.findViewById(R.id.repotubugimage);
         super.onDetach();
         Functions.deleteCache(context);
     }
-
+   
 
 }
