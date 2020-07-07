@@ -182,7 +182,6 @@ ImageView imagenavigation;
 
 
 
-            Picasso.get().load(pic_url).resize(200, 200).placeholder(R.drawable.profile_image_placeholder).centerCrop().into(imagenavigation);
 
 
 
@@ -692,6 +691,12 @@ ImageView repotubugimage=dialog.findViewById(R.id.repotubugimage);
         } catch (Exception e) {
 
         }
+        try {
+            Picasso.get().load(pic_url).resize(200, 200).placeholder(R.drawable.profile_image_placeholder).centerCrop().into(imagenavigation);
+
+        } catch (Exception e) {
+
+        }
 
     }
 
@@ -1058,6 +1063,6 @@ ImageView repotubugimage=dialog.findViewById(R.id.repotubugimage);
         super.onDetach();
         Functions.deleteCache(context);
     }
-   
+
 
 }
