@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "499548105018",
+    "firebase_url": "https://muzika-b6aed.firebaseio.com",
+    "project_id": "muzika-b6aed",
+    "storage_bucket": "muzika-b6aed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499548105018:android:d760f7f223694cbbd58803",
+        "android_client_info": {
+          "package_name": "in.techsays.muzika"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499548105018-ovf2ev6jiv9dasaoad8eq4jgp9to3gt7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.techsays.muzika",
+            "certificate_hash": "63a07167777e5dc992154249f15aebbd3892f5a9"
+          }
+        },
+        {
+          "client_id": "499548105018-grcmejvelhirhnoc2taamou49o94kvvt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBulPac9sAOtNiSE5CkQyN_vDbUUgqBmfw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499548105018-grcmejvelhirhnoc2taamou49o94kvvt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

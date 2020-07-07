@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:scrollingCache="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:paddingLeft="@dimen/spacing_large"
+                    android:paddingRight="@dimen/spacing_large"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:elevation="0dp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="2dp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/spacing_large">
+
+                                <RelativeLayout
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                         app:srcCompat="@drawable/ic_baseline_date_range_24" />
+
+
+
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="@dimen/spacing_mlarge"
+                                    android:layout_height="0dp" />
+
+                                <TextView
+                                    android:id="@+id/datecorona"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/green_900"
+                                    app:fontFamily="sans-serif-medium" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <View
+                            android:layout_width="@dimen/spacing_small"
+                            android:layout_height="0dp" />
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/spacing_large"
+                    android:paddingRight="@dimen/spacing_large">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total corona cases in World"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/red_A700" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+                            <TextView
+                                android:id="@+id/world_cases_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+                                android:textColor="@color/red_A700"
+                                app:fontFamily="sans-serif-medium" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_mxlarge" />
+
+
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Recover cases"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/green_A700" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+                            <TextView
+                                 android:id="@+id/world_recover_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+                                android:textColor="@color/green_A700"
+                                app:fontFamily="sans-serif-medium" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Death"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/blue_A700" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+                            <TextView
+                                android:id="@+id/world_death"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+                                android:textColor="@color/blue_A700"
+                                app:fontFamily="sans-serif-medium" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_mxlarge" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_small" />
+
+
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total corona cases in India"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/red_A700" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+                            <TextView
+                                android:id="@+id/india_cases_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+                                android:textColor="@color/red_A700"
+                                app:fontFamily="sans-serif-medium" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_mxlarge" />
+
+
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Recover cases  ["
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/green_A700" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+                            <TextView
+                                android:id="@+id/india_recover_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+                                android:textColor="@color/green_A700"
+                                app:fontFamily="sans-serif-medium" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Death"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/blue_A700" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_middle" />
+                            <TextView
+                                android:id="@+id/indias_death"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+                                android:textColor="@color/blue_A700"
+                                app:fontFamily="sans-serif-medium" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/spacing_mxlarge" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_medium"
+                        android:layout_marginTop="@dimen/spacing_middle"
+                        android:gravity="center"
+                        android:text="Today"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/grey_5"
+                        app:fontFamily="sans-serif-medium" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/spacing_large">
+
+                            <RelativeLayout
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="1dp">
+
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_centerInParent="true"
+                                    android:tint="@color/grey_40"
+                                    app:srcCompat="@drawable/stayhome11" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="@dimen/spacing_middle"
+                                android:layout_height="0dp" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kerala"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                                    android:textColor="@color/red_A700" />
+
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kerala Recover cases"
+                                    android:layout_marginTop="@dimen/_50sdp"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                                    android:textColor="@color/green_A700" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/kerala_cases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/red_A700" />
+
+                                <TextView
+                                    android:id="@+id/kerala_recover_cases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                     android:layout_marginTop="@dimen/_50sdp"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/green_A700" />
+
+                            </LinearLayout>
+
+
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/spacing_large">
+
+                            <RelativeLayout
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="1dp">
+
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_centerInParent="true"
+                                    android:tint="@color/grey_40"
+                                    app:srcCompat="@drawable/stayhome11" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="@dimen/spacing_middle"
+                                android:layout_height="0dp" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tamil Nadu"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                                    android:textColor="@color/red_A700" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tamil Nadu Recover cases"
+                                    android:layout_marginTop="@dimen/_50sdp"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                                    android:textColor="@color/green_A700" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tamilnadu_cases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/red_A700" />
+
+                                <TextView
+                                    android:id="@+id/tamilnadu_recover_cases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                     android:layout_marginTop="@dimen/_50sdp"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/green_A700" />
+
+                            </LinearLayout>
+
+
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/spacing_large">
+
+                            <RelativeLayout
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="1dp">
+
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_centerInParent="true"
+                                    android:tint="@color/grey_40"
+                                    app:srcCompat="@drawable/stayhome11" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="@dimen/spacing_middle"
+                                android:layout_height="0dp" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Karnataka"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                                    android:textColor="@color/red_A700" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Karnadaka Recover cases"
+                                    android:layout_marginTop="@dimen/_50sdp"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                                    android:textColor="@color/green_A700" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/karnadaka_cases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/red_A700" />
+
+                                <TextView
+                                    android:id="@+id/karnadaka_recover_cases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                     android:layout_marginTop="@dimen/_50sdp"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/green_A700" />
+
+                            </LinearLayout>
+
+
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/spacing_large">
+
+                            <RelativeLayout
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="1dp">
+
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_centerInParent="true"
+                                    android:tint="@color/grey_40"
+                                    app:srcCompat="@drawable/stayhome11" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="@dimen/spacing_middle"
+                                android:layout_height="0dp" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Delhi"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                                    android:textColor="@color/red_A700" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Delhi Recover cases"
+                                    android:layout_marginTop="@dimen/_50sdp"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                                    android:textColor="@color/green_A700" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/delhi_cases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/red_A700" />
+
+                                <TextView
+                                    android:id="@+id/delhi_recover_cases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                     android:layout_marginTop="@dimen/_50sdp"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/green_A700" />
+
+                            </LinearLayout>
+
+
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_large" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

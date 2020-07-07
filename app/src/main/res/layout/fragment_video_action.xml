@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000"
+    android:clickable="true"
+    tools:context=".VideoAction.VideoAction_F">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:backgroundTint="#000"
+            android:layout_height="wrap_content"
+            android:background="@drawable/d_bottom_gray_line">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"/>
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:id="@+id/share_notice_txt"
+                android:textColor="@color/colorAccent"
+                android:layout_centerInParent="true"
+                android:text="Share feature is only available in live mode"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:id="@+id/save_video_layout">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:id="@+id/callromateviewnumber"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_xsmall"
+                    android:tint="@android:color/white"
+                    app:backgroundTint="@color/green_A700"
+                    app:elevation="0dp"
+                    app:fabSize="normal"
+                    app:rippleColor="@android:color/white"
+                    app:srcCompat="@drawable/ic_baseline_cloud_download_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Save Video"
+                    android:textSize="13dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/copy_layout">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_xsmall"
+                    android:tint="@android:color/white"
+                    app:backgroundTint="@color/blue_A700"
+                    app:elevation="0dp"
+                    app:fabSize="normal"
+                    app:rippleColor="@android:color/white"
+                    app:srcCompat="@drawable/ic_baseline_file_copy_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Copy link"
+                    android:textSize="13dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/delete_layout">
+
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_xsmall"
+                    android:tint="@android:color/white"
+                    app:backgroundTint="@color/red_A700"
+                    app:elevation="0dp"
+                    app:fabSize="normal"
+                    app:rippleColor="@android:color/white"
+                    app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Delete Video"
+                    android:textSize="13dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/progress_bar"
+            android:theme="@style/Progressbar_style"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
