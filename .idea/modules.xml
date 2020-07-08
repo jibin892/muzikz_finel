@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="muzikz/app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/muzikz.iml" filepath="$PROJECT_DIR$/.idea/modules/muzikz.iml" group="muzikz" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/muzikz_finels.iml" filepath="$PROJECT_DIR$/.idea/modules/muzikz_finels.iml" group="muzikz_finels" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/muzikz_finels-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/muzikz_finels-app.iml" group="muzikz_finels/app" />
     </modules>
   </component>
 </project>

@@ -633,7 +633,7 @@ public class Functions {
         ((View) view.getParent()).setBackgroundColor(context.getResources().getColor(android.R.color.transparent));
 
         mBottomSheetDialog.show();
-        mBottomSheetDialog.setCancelable(false);
+        mBottomSheetDialog.setCancelable(true);
         mBottomSheetDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
